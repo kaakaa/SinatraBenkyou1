@@ -1,0 +1,16 @@
+%html
+  %head
+    %title 
+      Haml Sample
+    %meta{ :charset => "utf-8" }
+    %script{ :src => "/js/jquery-1.9.0.min.js" }
+    %link{ :rel => "stylesheet", :href => "/css/bootstrap.css" }
+  %body
+    %div.input-append
+      %h3
+        INPUT YOUT NAME!
+      %form{ :method => "post", :action => "/hello" }
+        %input{ :type => "text", :name => "name", :class => "span2" }
+        %input{ :type => "submit", :value => "SEND", :class => "btn btn-small" }
+    %h2
+      = "Hello " + @display_name.to_s + " !"
